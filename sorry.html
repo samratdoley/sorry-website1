@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorry ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .box {
+      text-align: center;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      width: 350px;
+    }
+
+    h1 {
+      color: #ff4d6d;
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 20px;
+      color: #555;
+    }
+
+    .heart {
+      font-size: 60px;
+      animation: beat 1s infinite;
+    }
+
+    img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 15px;
+      box-shadow: 0 0 20px pink;
+    }
+
+    .buttons {
+      margin-top: 30px;
+      position: relative;
+      height: 100px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #yesBtn {
+      background: #28a745;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #noBtn {
+      background: #dc3545;
+      color: white;
+      position: absolute;
+    }
+
+    @keyframes beat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box">
+
+    <div class="heart">❤️</div>
+
+    <!-- Girlfriend Photo -->
+    <img src="PHOTO-2026-05-12-01-38-28.jpg" alt="PHOTO-2026-05-12-01-38-28.jpg">
+
+    <h1>I'm Sorry 😔</h1>
+
+    <p>
+      Please forgive me...<br>
+      You mean everything to me ❤️
+      I LOVE YOU 💖
+    </p>
+
+    <div class="buttons">
+      <button id="yesBtn" onclick="forgive()">Yes 💖</button>
+      <button id="noBtn">No 😢</button>
+    </div>
+
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.floor(Math.random() * 300) - 150;
+      const y = Math.floor(Math.random() * 300) - 150;
+
+      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+
+    function forgive() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          background:linear-gradient(to right,#ff9a9e,#fad0c4);
+          font-family:Arial;
+          text-align:center;
+          color:white;
+          flex-direction:column;
+        ">
+          <h1 style="font-size:60px;">YAYYY ❤️</h1>
+          <p style="font-size:30px;">Thank you for forgiving me 🥰</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
